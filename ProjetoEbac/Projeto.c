@@ -1,21 +1,21 @@
-#include <stdio.h> //biblioteca de comunicação com o usúario
-#include <stdlib.h> // biblioteca de alocação de espaço em memória 
-#include <locale.h> // biblioteca de alocação de texto por região
-#include <string.h> // biblioteca responsável por cuidar das strings
+#include <stdio.h> //biblioteca de comunicaï¿½ï¿½o com o usï¿½ario
+#include <stdlib.h> // biblioteca de alocaï¿½ï¿½o de espaï¿½o em memï¿½ria 
+#include <locale.h> // biblioteca de alocaï¿½ï¿½o de texto por regiï¿½o
+#include <string.h> // biblioteca responsï¿½vel por cuidar das strings
 
-int registro () // Função responsável por cadastrar os usuários no sistema
+int registro () // Funï¿½ï¿½o responsï¿½vel por cadastrar os usuï¿½rios no sistema
 {
-	//inicio criação de variáveis/stings
+	//inicio criaï¿½ï¿½o de variï¿½veis/stings
 	char arquivo [40];
 	char cpf [40];
 	char nome [40];
 	char sobrenome [40];
 	char cargo [40];
-	//final da criação de variáveis
+	//final da criaï¿½ï¿½o de variï¿½veis
 	
 	
-	printf ("Digite o CPF a ser cadastrado:\n");// solicitando a informação pro usuário
-	scanf ("%s", &cpf);// scaneia o que o usuário digitar %s=string %d=int ?
+	printf ("Digite o CPF a ser cadastrado:\n");// solicitando a informaï¿½ï¿½o pro usuï¿½rio
+	scanf ("%s", &cpf);// scaneia o que o usuï¿½rio digitar %s=string %d=int ?
 	
 	strcpy (arquivo, cpf); // copia o valor do cpf p arquivo, pois a chave principal tem que ser o nome do arquivo 
 	
@@ -75,8 +75,8 @@ int consulta ()
 {
 	setlocale (LC_ALL, "Portuguese");
 	
-	char cpf [40]; // cria a variável cpf novamente, pois cada função só enxerga as próprias variáveis
-	char conteudo [200]; // cria a variável cpf novamente, pois cada função só enxerga as próprias variáveis
+	char cpf [40]; // cria a variï¿½vel cpf novamente, pois cada funï¿½ï¿½o sï¿½ enxerga as prï¿½prias variï¿½veis
+	char conteudo [200]; // cria a variï¿½vel cpf novamente, pois cada funï¿½ï¿½o sï¿½ enxerga as prï¿½prias variï¿½veis
 	
 	printf ("Digite o CPF a ser consultado.\n");
 	scanf ("%s" ,&cpf);
@@ -87,13 +87,13 @@ int consulta ()
 	
 	if (file == NULL)
 	{
-		printf ("CPF não encontrado.\n\n");
+		printf ("CPF nï¿½o encontrado.\n\n");
 		system ("pause");
 	}
 	
 	while (fgets(conteudo,200,file)!= NULL)
 	{
-	printf ("Essa são as informações do usuário.\n\n");
+	printf ("Essa sï¿½o as informaï¿½ï¿½es do usuï¿½rio.\n\n");
 	printf ("%s", &conteudo);
 	printf ("\n\n");
 	
@@ -104,7 +104,7 @@ int consulta ()
 int deletar ()
 {
 	
-	char cpf [40]; // cria a variável cpf novamente, pois cada função só enxerga as próprias variáveis
+	char cpf [40]; // cria a variï¿½vel cpf novamente, pois cada funï¿½ï¿½o sï¿½ enxerga as prï¿½prias variï¿½veis
 	
 	printf ("Digite o CPF a ser deletado.\n\n");
 	scanf ("%s",&cpf);
@@ -116,9 +116,9 @@ int deletar ()
 	
 	
 	
-	if (file == NULL); // comando if else // se == NULL -> comando. Se não {comando}
+	if (file == NULL); // comando if else // se == NULL -> comando. Se nï¿½o {comando}
 	{
-		printf ("\nCPF não existe na base de dados ou já foi deletado, obrigado.\n\n");	
+		printf ("\nCPF nï¿½o existe na base de dados ou jï¿½ foi deletado, obrigado.\n\n");	
 }
 	
 	
@@ -129,7 +129,7 @@ int deletar ()
 
 int nao ()
 {
-	printf ("Essa opção não existe.");
+	printf ("Essa opï¿½ï¿½o nï¿½o existe.");
 	system("pause");
 }
 
@@ -145,6 +145,7 @@ int main ()
 	
 	
 			printf ("\t### Bem vindo ao menu ###\n\n");
+			printf ("mais uma coisinha");
 			printf ("Login para acesso ao sistema \n\n");
 			printf ("Digite sua senha: ");
 			scanf ("%s",&senhadigitada);
@@ -165,22 +166,22 @@ int main ()
 		setlocale (LC_ALL, "Portuguese");
 	
 			printf ("\t### Bem vindo ao menu ###\n\n");
-			printf ("Escolha uma opção do menu:\n\n");
+			printf ("Escolha uma opï¿½ï¿½o do menu:\n\n");
 			printf ("\t1- Registrar nomes\n");
 			printf ("\t2- Consultar nomes\n");
 			printf ("\t3- Deletar nomes\n");
 			printf ("\t4- Sair do sistema\n");
-			printf ("Opção:");
+			printf ("Opï¿½ï¿½o:");
 	
 	scanf ("%d", &opcao);
 	system ("cls");
 	
-	switch (opcao) // seleção, parecido com o if
+	switch (opcao) // seleï¿½ï¿½o, parecido com o if
 	
 			{
 	
 			case 1: // caso escolha 1
-			registro (); // comando, printf ("lala"); ou qualquer outro, como a função registro (); sendo puxada caso o usuário digite 1
+			registro (); // comando, printf ("lala"); ou qualquer outro, como a funï¿½ï¿½o registro (); sendo puxada caso o usuï¿½rio digite 1
 			break; // fecha o case 1
 	
 			case 2:
